@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- jquery & bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- web font --> <!-- 1 -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="/css/master.css">
+    <title>설문조사</title>
+  </head>
+  <body style="text-align: center;">
+      <h3 style="margin-top: 30px; margin-bottom: 30px;">결과</h3>
+    <table border = 1 style="margin:auto; text-align:center;">
+        <thead>
+          <th></th>
+          <th>남자</th>
+          <th>여자</th>
+        </thead>
+        <tr>
+          <th>호랑이</th>
+          <td><%= contacts[0] %></td>
+          <td><%= contacts[2] %></td>
+        </tr>
+        <tr>
+          <th>코끼리</th>
+          <td><%= contacts[1] %></td>
+          <td><%= contacts[3] %></td>
+        </tr>
+      </table>
+      <br/><br/>
+        남자, 호랑이 : <%= contacts[0] %> <br/><br/>
+        남자, 코끼리 : <%= contacts[1] %> <br/><br/>
+        여자, 호랑이 : <%= contacts[2] %> <br/><br/>
+        여자, 코끼리 : <%= contacts[3] %> <br/><br/>
+    <a class="btn btn-primary" href="/contacts/new">뒤로가기</a>
+  </body>
+</html>
