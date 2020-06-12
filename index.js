@@ -58,7 +58,9 @@ app.get('/contacts/new', function(req, res){
 // Contacts - create // 9
 app.post('/contacts', function(req, res){
     Survey.create(req.body, function(err, contact){
-    if(err) return res.json(err);
+    if(err) {
+      return res.redirect('/contacts/new');
+    }
     res.redirect('/contacts');
   });
 });
